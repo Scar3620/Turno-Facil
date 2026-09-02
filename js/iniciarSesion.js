@@ -16,12 +16,12 @@ function ocultarError() {
 }
 
 //Cuando el formulario se envíe, ejecuta esta función, y dentro de ella a esperará respuestas del servidor
-form-Login .addEventListener("submit", async (evento) => {
+formLogin.addEventListener("submit", async (evento) => {
 
 evento.preventDefault(); // 1. Evita que la página se recargue sola
 
-const correo = input-correo.value;
-const contrasena = input-contrasena.value;
+const correo = inputCorreo.value;
+const contrasena = inputContrasena.value;
 
 //Le mandamos los datos al backend
 const respuesta = await fetch("http://localhost:3000/login",{

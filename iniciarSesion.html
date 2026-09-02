@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <!-- Codificación de caracteres -->
@@ -117,16 +117,20 @@
                 <!-- Formulario -->
                 <div class="col-lg-7 p-5">
 
-                    <form>
+                    <form id="form-login">
+                      <!-- Mensaje de error -->
+                      <div id="mensaje-error" class="alert alert-danger d-none" role="alert"></div>
+                      
                       <div class="form-floating mb-3">
-                          
+
                         <input 
                         class="form-control"
-                        id="input-usuario"
+                        type="email"
+                        id="input-correo"
                         placeholder="User">
 
                         <label class="form-label">
-                          Usuario
+                          correo
                         </label>
 
                       </div>
@@ -137,6 +141,7 @@
 
                         <input
                         type="password"
+                        id="input-contrasena"
                         class="form-control"
                         placeholder="Ingresa tu contraseña">
 
@@ -172,7 +177,7 @@
                       <buttom
                       type="submit"
                       id="btn-iniciar"
-                      class="btn btn-primary w-100 rounded-pill py-2" href="sesionUsuario.html?usuario=">                   
+                      class="btn btn-primary w-100 rounded-pill py-2">                   
                       Iniciar Sesion
                       </buttom>
 
