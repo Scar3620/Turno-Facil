@@ -20,8 +20,8 @@ form-Login .addEventListener("submit", async (evento) => {
 
 evento.preventDefault(); // 1. Evita que la página se recargue sola
 
-const correo = input-Correo.value;
-const contrasena = input-Contrasena.value;
+const correo = input-correo.value;
+const contrasena = input-contrasena.value;
 
 //Le mandamos los datos al backend
 const respuesta = await fetch("http://localhost:3000/login",{
