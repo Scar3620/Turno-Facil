@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "turno-facil-backend",
+			"problemMatcher": [],
+			"label": "npm: dev - turno-facil-backend",
+			"detail": "nodemon src/app.js"
+		}
+	]
+}

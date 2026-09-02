@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Hace la página responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título de la pestaña -->
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-info-subtle fixed-top">
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#inicio">Turno Fácil</a>
+
+        <!-- Botón Responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html#servicios">Servicios</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#contactos">Contacto</a>
+            </li>
+
+          </ul>
+
+          <!-- Barra de búsqueda -->
+
+          <form class="d-flex" role="search">
+
+            <input class="form-control me-2" type="search" placeholder="Search" />
+
+            <button class="btn btn-outline-dark me-2" type="submit">
+              Search
+            </button>
+
+          </form>
+
+          <!-- Botones -->
+
+          <a href="" class="btn btn-outline-dark me-2">
+            Iniciar Sesión
+          </a>
+
+          <a href="" class="btn btn-secondary">
+            Registrarse
+          </a>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+
+  <main>
+
+    <section id="inicio" class="container py-5" style="margin-top:90px;">
+
+        <!-- Título -->
+        <div class="text-center mb-5">
+
+            <h1 class="fw-bold">
+                Inicia sesión
+            </h1>
+
+            <p class="text-secondary">
+                Accede a tu cuenta para gestionar tus turnos
+            </p>
+
+        </div>
+
+        <!-- Tarjeta -->
+        <div class="card shadow-lg border-0 rounded-4">
+
+            <div class="row g-0">
+
+                <!-- Imagen -->
+                <div class="col-lg-5 d-flex justify-content-center align-items-center p-5">
+
+                    <img
+                        src="Imagen/candado.png"
+                        class="img-fluid"
+                        style="max-width:250px;"
+                        alt="Candado">
+
+                </div>
+
+                <!-- Formulario -->
+                <div class="col-lg-7 p-5">
+
+                    <form>
+                      <div class="form-floating mb-3">
+                          
+                        <input 
+                        class="form-control"
+                        id="input-usuario"
+                        placeholder="User">
+
+                        <label class="form-label">
+                          Usuario
+                        </label>
+
+                      </div>
+
+                      <!-- Campo de contraseña -->
+
+                      <div class="form-floating mb-3">
+
+                        <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Ingresa tu contraseña">
+
+                        <label class="form-label">
+                          Contraseña
+                        </label>
+
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <!-- Checkbox -->
+                         <div class="form-check">
+
+                          <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="recordarme">
+
+                          <label class="form-che-label"
+                          for="recordarme">
+                          Recordarme
+                          </label>
+                         </div>
+
+                         <!-- Checkbox -->
+                          <a href="#" class="text-decoration-none">
+                            ¿Olvidaste tu contraseña?
+                          </a>
+
+                      </div>
+
+                      <buttom
+                      type="submit"
+                      id="btn-iniciar"
+                      class="btn btn-primary w-100 rounded-pill py-2" href="sesionUsuario.html?usuario=">                   
+                      Iniciar Sesion
+                      </buttom>
+
+                    <div class="text-center my-3">
+                      o
+                    </div>
+
+                    <button
+                    type="button"
+                    class="btn btn-outline-secondary w-100">
+                    <i class="bi bi-google"></i>
+                    Continuar con Google
+                  </button>
+
+                  <div class="text-center mt-4">
+                    ¿No tienes cuenta?
+                    <a href="#" class="text-decoration-none">
+                      Regístrate aquí
+                    </a>
+                  </div>
+                    
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer id="contactos">
+
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Columna 1 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold">Turno Fácil</h5>
+
+          <p>
+            Optimizamos citas y turnos para pequeños y grandes negocios.
+          </p>
+
+          <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+
+          <a href="#"><i class="bi bi-instagram fs-4 me-2"></i></a>
+
+          <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Enlaces</h5>
+
+          <ul class="list-unstyled text-center">
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+
+            <li><a href="#servicios">Servicios</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Contacto</h5>
+
+          <p>
+            <i class="bi bi-envelope me-2"></i>
+            contacto@turnofacil.com
+          </p>
+
+          <p>
+            <i class="bi bi-telephone me-2"></i>
+            +57 300 000 000
+          </p>
+
+          <p>
+            <i class="bi bi-geo-alt me-2"></i>
+            Colombia
+          </p>
+
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Legal</h5>
+
+          <ul class="list-unstyled text-center">
+
+            <li><a href="#">Términos y condiciones</a></li>
+
+            <li><a href="#">Política de privacidad</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/iniciarSesion.js"></script>
+</body>
+
+</html>

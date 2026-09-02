@@ -1,0 +1,93 @@
+section {
+  padding: 75px;
+}
+
+#como-funciona {
+  padding-top: 200px;
+}
+
+.titulo-principal {
+  font-size: 50px;
+}
+
+DESCRIPCIÓN .descripcion {
+  font-size: 16px;
+}
+
+.logo-principal {
+  max-width: 350px;
+}
+
+.imagen-mini {
+  max-width: 80px;
+}
+
+.circulo-icono {
+  width: 100px;
+  height: 100px;
+  background-color: #a6edf7;
+  /* Azul claro */
+  border-radius: 50%;
+  /* Lo convierte en círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  /* Centra el círculo */
+}
+
+.circulo-icono i {
+  font-size: 55px;
+  color: #000000;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card-img-top {
+  height: 170px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+footer {
+  min-height: 180px;
+  padding: 35px 0;
+  background-color: #cff4fc;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+}
+/*estilos para pagina negocio*/
+
+.volver {
+  text-decoration: none;
+  color: #212529;
+  font-weight: 600;
+  font-size: 20px;
+}
+/*estilos para pagina confirmacion_pago*/
+.card {
+  border-radius: 20px;
+}
+
+.alert {
+  border-radius: 15px;
+}
+
+.display-4,
+.display-2 {
+  color: #0d6efd;
+}

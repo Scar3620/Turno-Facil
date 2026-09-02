@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Hace la página responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título de la pestaña -->
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-info-subtle fixed-top">
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#inicio">Turno Fácil</a>
+
+        <!-- Botón Responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#como-funciona">¿Cómo funciona?</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#servicios">Servicios</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#contactos">Contacto</a>
+            </li>
+
+          </ul>
+
+          <!-- Barra de búsqueda -->
+
+          <form class="d-flex" role="search">
+
+            <input class="form-control me-2" type="search" placeholder="Search" />
+
+            <button class="btn btn-outline-dark me-2" type="submit">
+              Search
+            </button>
+
+          </form>
+
+          <!-- Botones -->
+
+          <a href="iniciarSesion.html" class="btn btn-outline-dark me-2">
+            Iniciar Sesión
+          </a>
+
+          <a href="" class="btn btn-secondary">
+            Registrarse
+          </a>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+
+  <main>
+
+    <!-- sección de Inicio -->
+
+    <section id="inicio">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- Texto -->
+
+          <div class="col-md-6 mb-4">
+
+            <h1 class="titulo-principal">
+              Reserva tu turno de forma fácil y rápida
+            </h1>
+            <br>
+            <p class="descripcion">
+              Gestiona tus turnos en simples pasos, sin complicaciones!
+            </p>
+
+          </div>
+
+          <!-- Imagen -->
+
+          <div class="col-md-6 text-center">
+
+            <img src="Imagen/logo.PNG" alt="Logo" class="img-fluid logo-principal">
+
+          </div>
+
+          <div class="row text-center">
+
+            <div class="col-md-4 border-end">
+              <!-- clase para darle estilo al icono-->
+              <div class="circulo-icono">
+                <!--iconos agregados de boostrap-->
+                <i class="bi bi-stopwatch"></i>
+              </div>
+              <h4>Rápido</h4>
+              <p>Reserva tu turno en segundos y ahorra tiempo.</p>
+            </div>
+
+            <div class="col-md-4 border-end">
+              <div class="circulo-icono">
+                <!--iconos agregados de boostrap-->
+
+                <i class="bi bi-phone"></i>
+              </div>
+              <h4>Fácil de usar</h4>
+              <p>Plataforma intuitiva desde cualquier dispositivo.</p>
+            </div>
+
+            <div class="col-md-4 ">
+              <div class="circulo-icono">
+                <!--iconos agregados de boostrap-->
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Seguro</h4>
+              <p>Tu información y reservas están protegidas.</p>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <!-- sección ¿como funciona? -->
+    <section id="como-funciona">
+
+      <div class="container">
+        <h2 class="text-center">Como Funciona?</h2>
+      </div>
+
+      <div class="row text-center justify-content-center gx-0 mt-5">
+        <div class="col-md-3">
+          <img src="Imagen/lupa.png" class="img-fluid imagen-mini mb-4">
+          <h4>Busca un servicio</h4>
+          <p>Explora y elige el servicio<br> que necesites.</p>
+        </div>
+        <!--fechas agregadas de boostrap-->
+
+        <div class="col-md-1 mt-4 d-flex align-items-center justify-content-center">
+          <i class="bi bi-arrow-right fs-1 text-primary"></i>
+        </div>
+
+        <div class="col-md-3">
+          <img src="Imagen/calendario.png" class="img-fluid imagen-mini mb-4">
+          <h4>Elige fecha y hora</h4>
+          <p>Agenda a tu conveniencia!</p>
+        </div>
+        <!--fechas agregadas de boostrap-->
+        <div class="col-md-1 mt-4 d-flex align-items-center justify-content-center">
+          <i class="bi bi-arrow-right fs-1 text-primary"></i>
+        </div>
+        <div class="col-md-3">
+          <img src="Imagen/check.png" class="img-fluid imagen-mini mb-4">
+          <h4>Confirma tu reserva</h4>
+          <p>Confirma tu turno y recibe <br>información al instante</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!--sección de servicios-->
+    <section id="servicios">
+      <div class="container">
+        <div class="row text-center align-items-center">
+          <div class="col-md-6">
+            <h2>Nuestros Servicios</h2>
+
+            <p>Elige el servicio que necesites <br> y reserva tu turno en pocos pasos.</p>
+
+          </div>
+
+          <div class="col-md-6">
+            <img src="Imagen/calendario.png" class="img-fluid" alt="" width="200px">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+
+          <div class="col-md-4">
+            <div class="input-group">
+
+              <input type="search" class="form-control" placeholder="Buscar servicio...">
+
+              <button class="btn btn-primary me-5" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Ciudad</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#0">Barranquilla</a></li>
+                <li><a class="dropdown-item" href="#0">Bogotá</a></li>
+                <li><a class="dropdown-item" href="#0">Medellín</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Categorias</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#0">Todas</a></li>
+                <li><a class="dropdown-item" href="#0">Belleza</a></li>
+                <li><a class="dropdown-item" href="#0">Salud</a></li>
+                <li><a class="dropdown-item" href="#0">Bienestar</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Ordenar por</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#0">Recomendados</a></li>
+                <li><a class="dropdown-item" href="#0">Cerca de mí</a></li>
+                <li><a class="dropdown-item" href="#0">Precio De mayor a menor</a></li>
+                <li><a class="dropdown-item" href="#0">Precio De menor a mayor</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h4 class="mt-4">Categorias</h4>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-grid"></i>
+              Todas
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-scissors"></i>
+              Belleza
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-heart"></i>
+              Salud
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-people"></i>
+              Bienestar
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary  categoria">
+              <i class="bi bi-three-dots"></i>
+              Otras
+            </button>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center mt-4 ">
+
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/barberia.jpeg" class="card-img-top" alt="Barbería">
+
+              <div class="card-body">
+                <h5>Barberia</h5>
+                <p class="card-text">
+                  Corte de cabello, arreglo de barba y perfilado.
+                </p>
+
+
+                <a href="negocio.html?categoria=barberia" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/peluqueria.jpeg" class="card-img-top" alt="Peluqueria">
+
+              <div class="card-body">
+                <h5>peluqueria</h5>
+
+                <p class="card-text">
+                  Corte, Lavado, Secado, y Estilizado.
+                </p><br>
+
+                <a href="negocio.html?categoria=peluqueria" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/manicure.jpeg" class="card-img-top" alt="manicure">
+
+              <div class="card-body">
+                <h5>manicure</h5>
+                <p class="card-text">
+                  Manos, Pies, Completas, Esmalte estandar u otros.
+                </p>
+
+                <a href="negocio.html?categoria=manicure" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/spa.jpeg" class="card-img-top" alt="Spa">
+
+              <div class="card-body">
+                <h5>Spa</h5>
+                <p class="card-text">
+                  Masajes relajantes, Limpieza facial, Terapias corporales.
+                </p>
+
+                <a href="negocio.html?categoria=spa" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer id="contactos">
+
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Columna 1 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold">Turno Fácil</h5>
+
+          <p>
+            Optimizamos citas y turnos para pequeños y grandes negocios.
+          </p>
+
+          <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+
+          <a href="#"><i class="bi bi-instagram fs-4 me-2"></i></a>
+
+          <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Enlaces</h5>
+
+          <ul class="list-unstyled text-center">
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+
+            <li><a href="#servicios">Servicios</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Contacto</h5>
+
+          <p>
+            <i class="bi bi-envelope me-2"></i>
+            contacto@turnofacil.com
+          </p>
+
+          <p>
+            <i class="bi bi-telephone me-2"></i>
+            +57 300 000 000
+          </p>
+
+          <p>
+            <i class="bi bi-geo-alt me-2"></i>
+            Colombia
+          </p>
+
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Legal</h5>
+
+          <ul class="list-unstyled text-center">
+
+            <li><a href="#">Términos y condiciones</a></li>
+
+            <li><a href="#">Política de privacidad</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+</body>
+
+</html>

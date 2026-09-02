@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8" />
+
+  <!-- Hace la página responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título de la pestaña -->
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-info-subtle fixed-top">
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#inicio">Turno Fácil</a>
+
+        <!-- Botón Responsive -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html#inicio">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html#como-funciona">¿Cómo funciona?</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html#servicios">Servicios</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html#contactos">Contacto</a>
+            </li>
+
+          </ul>
+
+          <!-- Barra de búsqueda -->
+
+          <form class="d-flex" role="search">
+
+            <input class="form-control me-2" type="search" placeholder="Search" />
+
+            <button class="btn btn-outline-dark me-2" type="submit">
+              Search
+            </button>
+
+          </form>
+
+          <!-- Botones -->
+
+          <a href="" class="btn btn-outline-dark me-2">
+            Iniciar Sesión
+          </a>
+
+          <a href="" class="btn btn-secondary">
+            Registrarse
+          </a>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+
+  <main>
+
+    <!-- sección de Inicio -->
+    <section>
+      <div class="container">
+        <a href="index.html#servicios" class="volver">
+          <i class="bi bi-arrow-left"></i>
+          Volver a servicios
+        </a>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-5">
+
+            <h2 class="fw-bold">Reserva tu cita</h2>
+            <p class="text-muted">
+              Selecciona el servicio, la fecha y la hora que mejor te convengan.
+            </p>
+
+            <div class="card border-0 shadow rounded-4 overflow-hidden">
+
+              <img src="Imagen/barberia.jpg" class="card-img-top" alt="Spa" id="imagenNegocio">
+
+              <div class="card-body p-4">
+
+                <div class="d-flex align-items-center mb-3">
+
+                  <img src="Imagen/logo.png" width="65" height="65" class="rounded-circle me-3 border">
+
+                  <div>
+                    <h4 class="mb-1 fw-bold" id="nombreNegocio">
+                      Barberia Premium
+                    </h4>
+
+                    <span class="text-warning">
+                      ★★★★★
+                    </span>
+
+                    <span class="fw-semibold">
+                      4.9
+                    </span>
+
+                    <small class="text-muted">
+                      (128 reseñas)
+                    </small>
+
+                  </div>
+
+                </div>
+
+                <p class="mb-2">
+                  📍 Calle 85 #12-30, Bogotá
+                </p>
+
+                <p class="mb-2">
+                  🕘 Lunes a Domingo
+                  8:00 AM - 8:00 PM
+                </p>
+
+                <p class="text-muted" id="descripcionNegocio">
+                  💆 Masajes • Limpieza facial • Terapias corporales
+                </p>
+
+                <div class="alert alert-success mb-0 rounded-3">
+                  <strong>✔ Tu seguridad es nuestra prioridad</strong><br>
+                  Todos los negocios pasan por un proceso de verificación.
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+<div class="col-lg-7">
+  <div class="card border-0 shadow rounded-4 p-4 sticky-top" style="top:90px;">
+    <h4 class="fw-bold mb-4">Selecciona los detalles de tu cita</h4>
+
+    <!-- Servicio -->
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Servicio</label>
+      <select id="servicio" class="form-select">
+        <option value="Corte clásico">Corte clásico</option>
+        <option value="Barba">Barba</option>
+        <option value="Masaje">Masaje</option>
+      </select>
+    </div>
+
+    <!-- Profesional -->
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Profesional</label>
+      <select id="profesional" class="form-select">
+        <option value="Juan Pérez">Juan Pérez</option>
+        <option value="María Gómez">María Gómez</option>
+      </select>
+    </div>
+
+    <!-- Fecha -->
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Fecha</label>
+      <input type="date" id="fecha" class="form-control">
+    </div>
+
+    <!-- Hora -->
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Hora</label>
+      <div id="horas" class="d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-secondary">9:00 AM</button>
+        <button class="btn btn-outline-secondary">10:00 AM</button>
+        <button class="btn btn-outline-secondary">11:00 AM</button>
+        <button class="btn btn-outline-secondary">2:00 PM</button>
+        <button class="btn btn-outline-secondary">3:00 PM</button>
+      </div>
+    </div>
+
+    <!-- Resumen -->
+    <div class="bg-light rounded-4 p-3 mb-4">
+      <h5 class="fw-bold">Resumen de tu cita</h5>
+
+      <div class="d-flex justify-content-between">
+        <span>Servicio:</span>
+        <strong id="res-servicio">Corte clásico</strong>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <span>Profesional:</span>
+        <strong id="res-profesional">Juan Pérez</strong>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <span>Fecha:</span>
+        <strong id="res-fecha">16/07/2024</strong>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <span>Hora:</span>
+        <strong id="res-hora">11:00 AM</strong>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <span>Precio:</span>
+        <strong id="res-precio" class="text-success">$25.000</strong>
+      </div>
+    </div>
+
+<a id="btnConfirmar" class="btn btn-primary w-100 rounded-pill py-2" href="confirmacion_pago.html">
+  Confirmar reserva
+</a>
+
+  </div>
+</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer id="contactos">
+
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Columna 1 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold">Turno Fácil</h5>
+
+          <p>
+            Optimizamos citas y turnos para pequeños y grandes negocios.
+          </p>
+
+          <a href="#"><i class="bi bi-facebook fs-4 me-2"></i></a>
+
+          <a href="#"><i class="bi bi-instagram fs-4 me-2"></i></a>
+
+          <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Enlaces</h5>
+
+          <ul class="list-unstyled text-center">
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+
+            <li><a href="#servicios">Servicios</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Contacto</h5>
+
+          <p>
+            <i class="bi bi-envelope me-2"></i>
+            contacto@turnofacil.com
+          </p>
+
+          <p>
+            <i class="bi bi-telephone me-2"></i>
+            +57 300 000 000
+          </p>
+
+          <p>
+            <i class="bi bi-geo-alt me-2"></i>
+            Colombia
+          </p>
+
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="col-md-3">
+
+          <h5 class="fw-bold text-center">Legal</h5>
+
+          <ul class="list-unstyled text-center">
+
+            <li><a href="#">Términos y condiciones</a></li>
+
+            <li><a href="#">Política de privacidad</a></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/negocio.js"></script>
+
+</body>
+
+</html>
