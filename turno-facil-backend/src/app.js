@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/usuarios",(req, res) => {
-    const sql = "SELECT id_usuario, nombre, correo, Telefono, reputacion * FROM usuarios";
+    const sql = "SELECT id_usuario, nombre, correo, Telefono, reputacion FROM usuarios";
     connection.query(sql,(error,resultados) => {
         if(error){
             console.log(error);
