@@ -77,25 +77,19 @@
           </a>
 
           <div class="dropdown">
-            <a href="#"
-            class="d-flex align-items-center text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown">
+            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown">
 
-            <!-- Avatar -->
+              <!-- Avatar -->
 
-            <img
-           src="Imagen/avatar.png"
-           alt="Usuario"
-            width="45px"
-            height="45px"
-            class="rounded-circle me-2">
-          
+              <img src="Imagen/avatar.png" alt="Usuario" width="45px" height="45px" class="rounded-circle me-2">
+
             </a>
 
             <!-- Menú desplegable -->
-             
+
             <ul class="dropdown-menu dropdown-menu-end">
-               
+
               <li>
 
                 <a class="dropdown-item" href="#">
@@ -105,22 +99,24 @@
                   Perfil
 
                 </a>
-          
+
               </li>
 
               <li>
 
-                  <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="#">
 
-                    <i class="bi bi-gear me-2"></i>
+                  <i class="bi bi-gear me-2"></i>
 
-                   Configuración
+                  Configuración
 
-                   </a>
+                </a>
 
               </li>
 
-              <li><hr class="dropdown-divider"></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
 
               <li>
 
@@ -157,16 +153,38 @@
         </a>
 
         <div class="row justify-content-center mt-4">
-          <div class="col-lg-5">
-
+          <div class="col-lg-12 text-center">
             <h2 class="fw-bold">Reserva tu cita</h2>
             <p class="text-muted">
               Selecciona el servicio, la fecha y la hora que mejor te convengan.
             </p>
+          </div>
+        </div>
+
+        <!-- ===== INICIO DE LO AGREGADO ===== -->
+        <!-- Mensaje que se muestra SOLO si no hay negocios en esta categoría -->
+        <div id="mensajeSinNegocios" class="text-center text-muted mt-4" style="display:none;">
+          No hay negocios disponibles
+        </div>
+
+        <!-- Lista de negocios de la categoría (oculta si no hay ninguno) -->
+        <div class="row justify-content-center mt-4" id="seccionListaNegocios" style="display:none;">
+          <div class="col-lg-5">
+            <h5 class="fw-bold mb-3" id="tituloListaNegocios">Negocios disponibles</h5>
+            <div id="lista-negocios" style="max-height: 420px; overflow-y: auto;"></div>
+            <div id="paginacion-negocios" class="d-flex justify-content-center gap-2 mt-3"></div>
+          </div>
+        </div>
+        <!-- ===== FIN DE LO AGREGADO ===== -->
+
+        <!-- ===== MODIFICADO: todo este bloque ahora tiene id="panelReserva" para poder ocultarlo si no hay negocios ===== -->
+        <div class="row justify-content-center mt-4" id="panelReserva" style="display:none;">
+          <div class="col-lg-5">
 
             <div class="card border-0 shadow rounded-4 overflow-hidden">
 
-              <img src="Imagen/barberia.jpg" class="card-img-top" alt="Spa" id="imagenNegocio">
+              <!-- ===== MODIFICADO: sin datos fijos, se llena al elegir un negocio ===== -->
+              <img src="Imagen/otros.jpeg" class="card-img-top" alt="Negocio" id="imagenNegocio">
 
               <div class="card-body p-4">
 
@@ -176,37 +194,18 @@
 
                   <div>
                     <h4 class="mb-1 fw-bold" id="nombreNegocio">
-                      Barberia Premium
+                      Selecciona un negocio de la lista
                     </h4>
-
-                    <span class="text-warning">
-                      ★★★★★
-                    </span>
-
-                    <span class="fw-semibold">
-                      4.9
-                    </span>
-
-                    <small class="text-muted">
-                      (128 reseñas)
-                    </small>
 
                   </div>
 
                 </div>
 
-                <p class="mb-2">
-                  📍 Calle 85 #12-30, Bogotá
-                </p>
+                <p class="mb-2" id="direccionNegocio"></p>
 
-                <p class="mb-2">
-                  🕘 Lunes a Domingo
-                  8:00 AM - 8:00 PM
-                </p>
+                <p class="mb-2" id="horarioNegocio"></p>
 
-                <p class="text-muted" id="descripcionNegocio">
-                  💆 Masajes • Limpieza facial • Terapias corporales
-                </p>
+                <p class="text-muted" id="descripcionNegocio"></p>
 
                 <div class="alert alert-success mb-0 rounded-3">
                   <strong>✔ Tu seguridad es nuestra prioridad</strong><br>
@@ -217,83 +216,81 @@
 
             </div>
           </div>
-<div class="col-lg-7">
-  <div class="card border-0 shadow rounded-4 p-4 sticky-top" style="top:90px;">
-    <h4 class="fw-bold mb-4">Selecciona los detalles de tu cita</h4>
+          <div class="col-lg-7">
+            <div class="card border-0 shadow rounded-4 p-4 sticky-top" style="top:90px;">
+              <h4 class="fw-bold mb-4">Selecciona los detalles de tu cita</h4>
 
-    <!-- Servicio -->
-    <div class="mb-3">
-      <label class="form-label fw-semibold">Servicio</label>
-      <select id="servicio" class="form-select">
-        <option value="Corte clásico">Corte clásico</option>
-        <option value="Barba">Barba</option>
-        <option value="Masaje">Masaje</option>
-      </select>
-    </div>
+              <!-- Servicio -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Servicio</label>
+                <!-- ===== MODIFICADO: opciones y disabled se controlan desde negocio.js ===== -->
+                <select id="servicio" class="form-select" disabled>
+                  <option value="">Elige un negocio primero</option>
+                </select>
+              </div>
 
-    <!-- Profesional -->
-    <div class="mb-3">
-      <label class="form-label fw-semibold">Profesional</label>
-      <select id="profesional" class="form-select">
-        <option value="Juan Pérez">Juan Pérez</option>
-        <option value="María Gómez">María Gómez</option>
-      </select>
-    </div>
+              <!-- Profesional -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Profesional</label>
+                <!-- ===== MODIFICADO: opciones y disabled se controlan desde negocio.js ===== -->
+                <select id="profesional" class="form-select" disabled>
+                  <option value="">Elige un negocio primero</option>
+                </select>
+              </div>
 
-    <!-- Fecha -->
-    <div class="mb-3">
-      <label class="form-label fw-semibold">Fecha</label>
-      <input type="date" id="fecha" class="form-control">
-    </div>
+              <!-- Fecha -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Fecha</label>
+                <input type="date" id="fecha" class="form-control" disabled> <!-- ===== MODIFICADO: disabled ===== -->
+              </div>
 
-    <!-- Hora -->
-    <div class="mb-4">
-      <label class="form-label fw-semibold">Hora</label>
-      <div id="horas" class="d-flex flex-wrap gap-2">
-        <button class="btn btn-outline-secondary">9:00 AM</button>
-        <button class="btn btn-outline-secondary">10:00 AM</button>
-        <button class="btn btn-outline-secondary">11:00 AM</button>
-        <button class="btn btn-outline-secondary">2:00 PM</button>
-        <button class="btn btn-outline-secondary">3:00 PM</button>
-      </div>
-    </div>
+              <!-- Hora -->
+              <div class="mb-4">
+                <label class="form-label fw-semibold">Hora</label>
+                <!-- ===== MODIFICADO: los botones de hora se generan dinámicamente en negocio.js ===== -->
+                <div id="horas" class="d-flex flex-wrap gap-2">
+                  <span class="text-muted">Elige un negocio, servicio y profesional primero</span>
+                </div>
+              </div>
 
-    <!-- Resumen -->
-    <div class="bg-light rounded-4 p-3 mb-4">
-      <h5 class="fw-bold">Resumen de tu cita</h5>
+              <!-- Resumen -->
+              <div class="bg-light rounded-4 p-3 mb-4">
+                <h5 class="fw-bold">Resumen de tu cita</h5>
 
-      <div class="d-flex justify-content-between">
-        <span>Servicio:</span>
-        <strong id="res-servicio">Corte clásico</strong>
-      </div>
+                <div class="d-flex justify-content-between">
+                  <span>Servicio:</span>
+                  <strong id="res-servicio">—</strong>
+                </div>
 
-      <div class="d-flex justify-content-between">
-        <span>Profesional:</span>
-        <strong id="res-profesional">Juan Pérez</strong>
-      </div>
+                <div class="d-flex justify-content-between">
+                  <span>Profesional:</span>
+                  <strong id="res-profesional">—</strong>
+                </div>
 
-      <div class="d-flex justify-content-between">
-        <span>Fecha:</span>
-        <strong id="res-fecha">16/07/2024</strong>
-      </div>
+                <div class="d-flex justify-content-between">
+                  <span>Fecha:</span>
+                  <strong id="res-fecha">—</strong>
+                </div>
 
-      <div class="d-flex justify-content-between">
-        <span>Hora:</span>
-        <strong id="res-hora">11:00 AM</strong>
-      </div>
+                <div class="d-flex justify-content-between">
+                  <span>Hora:</span>
+                  <strong id="res-hora">—</strong>
+                </div>
 
-      <div class="d-flex justify-content-between">
-        <span>Precio:</span>
-        <strong id="res-precio" class="text-success">$25.000</strong>
-      </div>
-    </div>
+                <div class="d-flex justify-content-between">
+                  <span>Precio:</span>
+                  <strong id="res-precio" class="text-success">—</strong>
+                </div>
+              </div>
 
-<a id="btnConfirmar" class="btn btn-primary w-100 rounded-pill py-2" href="confirmacion_pago.html">
-  Confirmar reserva
-</a>
+              <!-- ===== MODIFICADO: disabled hasta elegir negocio+servicio+profesional; negocio.js lo habilita ===== -->
+              <a id="btnConfirmar" class="btn btn-primary w-100 rounded-pill py-2 disabled"
+                href="confirmacion_pago.html" aria-disabled="true">
+                Confirmar reserva
+              </a>
 
-  </div>
-</div>
+            </div>
+          </div>
         </div>
       </div>
 
