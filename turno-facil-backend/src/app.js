@@ -32,6 +32,30 @@ app.post("/usuarios",(req,res) => {
     if (!nombre || !correo || !Telefono || !contrasena) {
         return res.status(400).json({mensaje: "Todos los campos son obligatorios"});
     }
+    // Antes de insertar, buscamos si ya existe un usuario con ese correo o ese teléfono
+    const sqlVerificar = "SELECT correo, Telefono FROM usuarios WHERE correo = ? OR Telefono = ?";
+
+    connection.query(sqlVerificar, [correo, Telefono], (error, resultados) => {
+        if (error) {
+            console.log(error);
+            return res.status(500).json({ mensaje: "Error al verificar el usuario" });
+        }
+
+        if (resultados.length > 0) {
+            const correoRepetido = resultados.some((u) => u.correo === correo);
+            const telefonoRepetido = resultados.some((u) => u.Telefono === Telefono);
+
+            if (correoRepetido && telefonoRepetido) {
+                return res.status(409).json({ mensaje: "El correo y el teléfono ya están registrados" });
+            }
+            if (correoRepetido) {
+                return res.status(409).json({ mensaje: "El correo ya está registrado" });
+            }
+            if (telefonoRepetido) {
+                return res.status(409).json({ mensaje: "El teléfono ya está registrado" });
+            }
+        }
+
     const sql = `
     insert into usuarios(nombre, correo, Telefono, contrasena)
     VALUES (?, ?, ?, ?)
@@ -57,41 +81,29 @@ app.post("/usuarios",(req,res) => {
             });
         }
     );
+    });
 });
 
-app.post("/login", (req, res)=> {
-    const { correo, contrasena } = req.body;
-    if (!correo || !contrasena) {return res.status(400).json({
-    mensaje: "Correo y contraseña son obligatorios"});
+app.post("/login", (req, res) => {
+  const { correo, contrasena } = req.body;
+  if (!correo || !contrasena) {
+    return res.status(400).json({ mensaje: "Correo y contraseña son obligatorios" });
+  }
+
+  const sql = "SELECT * FROM usuarios WHERE correo = ?";
+  connection.query(sql, [correo], (error, resultados) => {
+    if (error) return res.status(500).json({ mensaje: "Error en el servidor" });
+    if (resultados.length === 0) return res.status(404).json({ mensaje: "Usuario no existe" });
+
+    const usuario = resultados[0];
+    if (usuario.contrasena !== contrasena) {
+      return res.status(401).json({ mensaje: "Contraseña incorrecta" });
     }
-    const sql = `
-    SELECT
-    id_usuario, 
-    nombre, 
-    correo, 
-    Telefono, 
-    reputacion 
-    FROM usuarios 
-    WHERE correo = ? AND contrasena = ? 
-    `; 
-    connection.query(
-        sql,
-        [correo, contrasena],
-        (error, resultados) => {
-            if (error) {console.log(error);
-                return res.status(500).json({mensaje: "Error al iniciar sesión"})
-              }
-                 if (resultados.length === 0) { return res.status(401).json ({
-                 mensaje: "Correo o contraseña incorrectos",
-                 usuario: resultados[0]
-                });
-                }
-            res.status(200).json({mensaje:"Inicio de sesión exitoso",
-                usuario: resultados[0]
-            });
-        }
-    );
+
+    res.json({ mensaje: "Inicio de sesión exitoso", usuario });
+  });
 });
+
 
 const PORT = 3000;
 
