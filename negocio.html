@@ -27,7 +27,7 @@
       <div class="container-fluid">
 
         <!-- Logo -->
-        <a class="navbar-brand" href="#inicio">Turno Fácil</a>
+        <a class="navbar-brand" href="landing_page.html">Turno Fácil</a>
 
         <!-- Botón Responsive -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -40,20 +40,20 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link active" href="index.html#inicio">Inicio</a>
+              <a class="nav-link active" href="sesionUsuario.html">Inicio</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="index.html#como-funciona">¿Cómo funciona?</a>
+              <a class="nav-link active" href="Tutorial-Turno-Facil/tutorial.html">¿Cómo funciona?</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="index.html#servicios">Servicios</a>
+              <a class="nav-link active" href="serviciosUsuario.html">Servicios</a>
             </li>
 
 
             <li class="nav-item">
-              <a class="nav-link active" href="index.html#contactos">Contacto</a>
+              <a class="nav-link active" href="negocio.html#contactos">Contacto</a>
             </li>
 
           </ul>
@@ -72,13 +72,71 @@
 
           <!-- Botones -->
 
-          <a href="" class="btn btn-outline-dark me-2">
-            Iniciar Sesión
+          <a href="#" class="nav-link me-3">
+            <i class="bi bi-bell fs-4"></i>
           </a>
 
-          <a href="" class="btn btn-secondary">
-            Registrarse
-          </a>
+          <div class="dropdown">
+            <a href="#"
+            class="d-flex align-items-center text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown">
+
+            <!-- Avatar -->
+
+            <img
+           src="Imagen/avatar.png"
+           alt="Usuario"
+            width="45px"
+            height="45px"
+            class="rounded-circle me-2">
+          
+            </a>
+
+            <!-- Menú desplegable -->
+             
+            <ul class="dropdown-menu dropdown-menu-end">
+               
+              <li>
+
+                <a class="dropdown-item" href="#">
+
+                  <i class="bi bi-person me-2"></i>
+
+                  Perfil
+
+                </a>
+          
+              </li>
+
+              <li>
+
+                  <a class="dropdown-item" href="#">
+
+                    <i class="bi bi-gear me-2"></i>
+
+                   Configuración
+
+                   </a>
+
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+
+              <li>
+
+                <a class="dropdown-item text-danger" href="#">
+
+                  <i class="bi bi-box-arrow-right me-2"></i>
+
+                  Cerrar sesión
+
+                </a>
+
+              </li>
+
+            </ul>
+
+          </div>
 
         </div>
 
@@ -93,7 +151,7 @@
     <!-- sección de Inicio -->
     <section>
       <div class="container">
-        <a href="index.html#servicios" class="volver">
+        <a href="serviciosUsuario.html" class="volver">
           <i class="bi bi-arrow-left"></i>
           Volver a servicios
         </a>

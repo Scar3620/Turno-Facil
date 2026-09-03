@@ -45,7 +45,7 @@
 
 
             <li class="nav-item">
-              <a class="nav-link active" href="landing_page.html#servicios">Servicios</a>
+              <a class="nav-link active" href="index.html#servicios">Servicios</a>
             </li>
 
             <li class="nav-item">
@@ -158,87 +158,197 @@
   <!-- ================= CONTENIDO PRINCIPAL ================= -->
   <main>
     <section class="container">
-      <div class="row">
-      
-        <div class="col-md-6">
-          <h1
-          id="saludo"> </h1>
-          <h3> Bienvenido</h3>
+      <div class="container">
+        <div class="row text-center align-items-center">
+          <div class="col-md-6">
+            <h2>Nuestros Servicios</h2>
+
+            <p>Elige el servicio que necesites <br> y reserva tu turno en pocos pasos.</p>
+
+          </div>
+
+          <div class="col-md-6">
+            <img src="Imagen/calendario.png" class="img-fluid" alt="" width="200px">
+          </div>
         </div>
-        <div class="col-md-6">
-          <img src="Imagen/calendario.png"
-          alt="calendar"
-          style="max-width:250px;"
-          class="img-fluid">
+
+        <div class="row justify-content-center mt-5">
+
+          <div class="col-md-4">
+            <div class="input-group">
+
+              <input type="search" class="form-control" placeholder="Buscar servicio...">
+
+              <button class="btn btn-primary me-5" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Ciudad</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#0">Barranquilla</a></li>
+                <li><a class="dropdown-item" href="#0">Bogotá</a></li>
+                <li><a class="dropdown-item" href="#0">Medellín</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Categorias</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#0">Todas</a></li>
+                <li><a class="dropdown-item" href="#0">Belleza</a></li>
+                <li><a class="dropdown-item" href="#0">Salud</a></li>
+                <li><a class="dropdown-item" href="#0">Bienestar</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Ordenar por</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#0">Recomendados</a></li>
+                <li><a class="dropdown-item" href="#0">Cerca de mí</a></li>
+                <li><a class="dropdown-item" href="#0">Precio De mayor a menor</a></li>
+                <li><a class="dropdown-item" href="#0">Precio De menor a mayor</a></li>
+
+              </ul>
+            </div>
+          </div>
         </div>
-        
-      </div>
-        <h4>¿Qué deseas hacer?</h4>
-        <div class="row">
+        <h4 class="mt-4">Categorias</h4>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-grid"></i>
+              Todas
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-scissors"></i>
+              Belleza
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-heart"></i>
+              Salud
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary categoria">
+              <i class="bi bi-people"></i>
+              Bienestar
+            </button>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-outline-primary  categoria">
+              <i class="bi bi-three-dots"></i>
+              Otras
+            </button>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center mt-4 ">
+
           <div class="col-md-3">
-            <div class="card align-items-center">
 
-              <img src="Imagen/lupa.png" class="img-fluid" style="max-width: 100px;" alt="Spa">
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/barberia.jpeg" class="card-img-top" alt="Barbería">
 
               <div class="card-body">
-                <h5>Encuenta negocios y servicios cerca</h5>
+                <h5>Barberia</h5>
+                <p class="card-text">
+                  Corte de cabello, arreglo de barba y perfilado.
+                </p>
 
-                <a href="serviciosUsuario.html" class="btn btn-primary w-100 rounded-pill">
-                  Buscar servicio
+
+                <a href="negocio.html?categoria=barberia" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
                 </a>
 
               </div>
 
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card align-items-center">
 
-              <img src="Imagen/calendario.png" class="img-fluid" style="max-width: 100px;" alt="Spa">
+          </div>
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/peluqueria.jpeg" class="card-img-top" alt="Peluqueria">
 
               <div class="card-body">
-                <h5>Consulta y gestiona tus reservas</h5>
+                <h5>peluqueria</h5>
 
-                <a href="confirmacion_pago.html" class="btn btn-primary w-100 rounded-pill">
-                  Ver mis reservas
+                <p class="card-text">
+                  Corte, Lavado, Secado, y Estilizado.
+                </p><br>
+
+                <a href="negocio.html?categoria=peluqueria" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
                 </a>
 
               </div>
 
             </div>
-        
-        </div>
-        <div class="col-md-3">
-            <div class="card align-items-center">
 
-              <img src="Imagen/corazon.png" class="img-fluid" style="max-width: 100px;" alt="Spa">
+          </div>
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/manicure.jpeg" class="card-img-top" alt="manicure">
 
               <div class="card-body">
-                <h5>Accede a tus negocios y servicios favoritos</h5>
+                <h5>manicure</h5>
+                <p class="card-text">
+                  Manos, Pies, Completas, Esmalte estandar u otros.
+                </p>
+
+                <a href="negocio.html?categoria=manicure" class="btn btn-primary w-100 rounded-pill">
+                  Ver más
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-3">
+
+            <div class="card border-0 shadow-lg h-100">
+
+              <img src="Imagen/spa.jpeg" class="card-img-top" alt="Spa">
+
+              <div class="card-body">
+                <h5>Spa</h5>
+                <p class="card-text">
+                  Masajes relajantes, Limpieza facial, Terapias corporales.
+                </p>
 
                 <a href="negocio.html?categoria=spa" class="btn btn-primary w-100 rounded-pill">
-                  Ver favoritos
+                  Ver más
                 </a>
 
               </div>
 
             </div>
+
+          </div>
+
+
         </div>
-        <div class="col-md-3">
-            <div class="card align-items-center">
 
-              <img src="Imagen/avatar.png" class="img-fluid" style="max-width: 100px;" alt="Spa">
-
-              <div class="card-body">
-                <h5>Edita tu informacion personal</h5>
-
-                <a href="#0" class="btn btn-primary w-100 rounded-pill">
-                  Ir a mi perfil
-                </a>
-
-              </div>
-
-            </div>
       </div>
     </section>
     <section class="container-fluid">
